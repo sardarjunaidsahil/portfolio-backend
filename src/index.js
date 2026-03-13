@@ -9,7 +9,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: [process.env.CLIENT_URL || "http://localhost:5173"],
+    origin: [
+        process.env.CLIENT_URL || "http://localhost:5173",
+        "https://sardarjunaidsahil-portfolio.vercel.app",
+        "https://portfolio-frontend-tau-ten.vercel.app"
+    ],
     credentials: true,
 }));
 app.use(express.json({ limit: "10kb" }));
